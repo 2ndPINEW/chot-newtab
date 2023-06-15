@@ -1,11 +1,11 @@
-const Popup = () => {
-  document.body.className = 'w-[30rem] h-[10rem]';
+import { ContributesGraph } from './components/ContributesGraph';
 
+const NewTab = () => {
   return (
     <>
-      <div className="flex justify-center mt-2 text-base">Popup Counter</div>
+      <ContributesGraph></ContributesGraph>
     </>
   );
 };
 
-export default Popup;
+export default NewTab;
