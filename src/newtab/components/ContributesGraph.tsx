@@ -1,10 +1,7 @@
 import { useFetchContributes } from '../../app/hooks/useFetch';
 
 export const ContributesGraph = () => {
-  const userName = '2ndPINEW';
-
-  const query = useFetchContributes(userName);
-  const contributes = query.data;
+  const { data: contributes } = useFetchContributes();
 
   if (!contributes) {
     return;
@@ -21,10 +18,10 @@ export const ContributesGraph = () => {
   const height = 7 * (size + margin * 2) + padding * 2;
 
   const weekItems = weeks.map((week) => {
-    return week.contributionDays.map((day) => {
+    return week.contributionDays.map((day, i) => {
       return (
         <div
-          key={day.date}
+          key={i}
           style={{
             width: `${size}px`,
             height: `${size}px`,
