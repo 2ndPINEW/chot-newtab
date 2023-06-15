@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../app/store';
-import Popup from './Popup';
+import Popup from './Newtab';
 
 it('should load and display Popup', async () => {
   render(

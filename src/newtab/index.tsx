@@ -1,10 +1,10 @@
 import '../global.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Options from './Options';
+import Popup from './Newtab';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Options />
+    <Popup />
   </React.StrictMode>
 );
