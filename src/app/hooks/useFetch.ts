@@ -3,6 +3,7 @@ import { getContribution } from '../api/github';
 import { QUERY_KEYS } from '../constants/queryKeys';
 import { contributesInitialData } from '../constants/initialData';
 import browser from 'webextension-polyfill';
+import { getWeatherData } from '../api/openmetro';
 
 export const useFetchContributes = () => {
   return useQuery({
@@ -13,5 +14,24 @@ export const useFetchContributes = () => {
       return await getContribution(userId);
     },
     initialData: contributesInitialData,
+  });
+};
+
+export const useFetchWeather = () => {
+  return useQuery({
+    queryKey: [QUERY_KEYS.WEATHER],
+    queryFn: async () => {
+      const geoLocation = await getGeoLocation();
+      return await getWeatherData({
+        latitude: geoLocation.coords.latitude,
+        longitude: geoLocation.coords.longitude,
+      });
+    },
+  });
+};
+
+const getGeoLocation = async () => {
+  return new Promise<GeolocationPosition>((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
   });
 };

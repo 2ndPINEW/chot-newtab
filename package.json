@@ -28,6 +28,9 @@
     "@twind/preset-tailwind": "^1.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-particles": "^2.10.1",
+    "tsparticles": "^2.10.1",
+    "tsparticles-engine": "^2.10.1",
     "webextension-polyfill": "^0.10.0",
     "zod": "^3.21.4"
   },
