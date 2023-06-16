@@ -21,7 +21,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         // see web_accessible_resources in the manifest config
-        welcome: join(__dirname, 'src/welcome/welcome.html'),
+        // welcome: join(__dirname, 'src/welcome/welcome.html'),
       },
       output: {
         chunkFileNames: 'assets/chunk-[hash].js',
