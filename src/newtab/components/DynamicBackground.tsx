@@ -25,7 +25,7 @@ export const DynamicBackground = () => {
         height: '100dvh',
         backgroundColor,
         zIndex: -1,
-        transition: 'background-color 30s ease',
+        transition: 'background-color 0.5s ease',
       }}
     >
       <Particles
