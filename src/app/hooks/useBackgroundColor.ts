@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 
 export const useBackgroundColor = () => {
-  const [backgroundColor, setBackgroundColor] = useState(getColor());
+  const [backgroundColor, setBackgroundColor] = useState('#00000000');
 
   useEffect(() => {
+    setTimeout(() => {
+      setBackgroundColor(getColor());
+    });
     const timer = setInterval(() => {
       setBackgroundColor(getColor());
     }, 1000 * 60);
