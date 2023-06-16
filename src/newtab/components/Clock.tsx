@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useFont } from '../../app/hooks/useFont';
 
 export const Clock = () => {
   const calcClock = () => {
@@ -9,6 +10,7 @@ export const Clock = () => {
   };
 
   const [clock, setClock] = useState(calcClock());
+  const [fontFamily] = useFont();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,5 +21,14 @@ export const Clock = () => {
     };
   }, []);
 
-  return <div className="text-5xl text-white">{clock}</div>;
+  return (
+    <div
+      className="text-5xl text-white"
+      style={{
+        fontFamily: fontFamily,
+      }}
+    >
+      {clock}
+    </div>
+  );
 };
