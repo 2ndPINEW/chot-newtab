@@ -10,14 +10,14 @@ const manifest = defineManifest(async (env) => ({
   name: `${env.mode === 'development' ? '[Dev] ' : ''}Chot NewTab`,
   description: 'Chot NewTab',
   version,
-  host_permissions: ['<all_urls>'],
+  host_permissions: ['https://contributes.obake.land/*', 'https://api.open-meteo.com/*'],
   options_ui: {
     page: 'options/options.html',
     open_in_tab: true,
   },
   web_accessible_resources: [
     {
-      resources: ['*'],
+      resources: ['options/options.html'],
       matches: ['<all_urls>'],
     },
   ],
