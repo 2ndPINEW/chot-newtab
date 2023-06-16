@@ -28,6 +28,7 @@ export const ContributesGraph = () => {
             backgroundColor: day.color,
             margin: `${margin}px`,
             borderRadius: `${blockBorderRadius}px`,
+            transition: 'all 0.5s ease-in-out',
           }}
         ></div>
       );
