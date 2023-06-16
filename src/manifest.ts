@@ -16,10 +16,7 @@ const manifest = defineManifest(async (env) => ({
     open_in_tab: true,
   },
   icons: {
-    '16': 'images/extension_16.png',
-    '32': 'images/extension_32.png',
-    '48': 'images/extension_48.png',
-    '128': 'images/extension_128.png',
+    '128': 'images/128.png',
   },
   permissions: ['storage', 'tabs'],
   chrome_url_overrides: {
