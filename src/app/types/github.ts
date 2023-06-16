@@ -29,22 +29,3 @@ export type ContributesResponse = {
     message: string;
   }[];
 };
-
-export const ContributesQuery = `
-query($userName:String!) {
-  user(login: $userName){
-    contributionsCollection {
-      contributionCalendar {
-        totalContributions
-        weeks {
-          contributionDays {
-            contributionCount
-            date
-            color
-          }
-        }
-      }
-    }
-  }
-}
-`;

@@ -1,19 +1,8 @@
-import { ContributesQuery, ContributesResponse } from '../types/github';
-
-const TOKEN = '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';
+import { ContributesResponse } from '../types/github';
 
 export async function getContribution(userName: string): Promise<ContributesResponse> {
-  const variables = JSON.stringify({ userName });
-  const body = {
-    query: ContributesQuery,
-    variables,
-  };
-  const res = await fetch('https://api.github.com/graphql', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-    },
-    body: JSON.stringify(body),
+  const res = await fetch(`https://contributes.obake.land/api/contributes?userName=${userName}`, {
+    method: 'GET',
   });
   const json = await res.json();
 
