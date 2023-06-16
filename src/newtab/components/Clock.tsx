@@ -19,5 +19,5 @@ export const Clock = () => {
     };
   }, []);
 
-  return <div className="text-5xl">{clock}</div>;
+  return <div className="text-5xl text-white">{clock}</div>;
 };
