@@ -18,7 +18,7 @@ const manifest = defineManifest(async (env) => ({
   icons: {
     '128': 'images/128.png',
   },
-  permissions: ['storage', 'tabs'],
+  permissions: ['storage'],
   chrome_url_overrides: {
     newtab: 'newtab/newtab.html',
   },
