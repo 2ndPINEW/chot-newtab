@@ -1,4 +1,4 @@
-import { useFetchContributes } from '../../app/hooks/useFetch';
+import { useFetchContributes } from '../../core/hooks/useFetch';
 
 export const ContributesGraph = () => {
   const { data: contributes } = useFetchContributes();

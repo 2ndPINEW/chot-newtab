@@ -5,8 +5,8 @@ import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
 
-import { useBackgroundColor } from '../../app/hooks/useBackgroundColor';
-import { useWeatherParticle } from '../../app/hooks/useWeatherParticle';
+import { useBackgroundColor } from '../../core/hooks/useBackgroundColor';
+import { useWeatherParticle } from '../../core/hooks/useWeatherParticle';
 
 export const DynamicBackground = () => {
   const [backgroundColor] = useBackgroundColor();

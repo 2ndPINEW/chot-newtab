@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useFont } from '../../app/hooks/useFont';
+import { useFont } from '../../core/hooks/useFont';
 
 export const Clock = () => {
   const calcClock = () => {
