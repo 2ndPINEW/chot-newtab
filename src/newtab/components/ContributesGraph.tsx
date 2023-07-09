@@ -1,11 +1,8 @@
+import React from 'react';
 import { useFetchContributes } from '../../app/hooks/useFetch';
 
 export const ContributesGraph = () => {
   const { data: contributes } = useFetchContributes();
-
-  if (!contributes) {
-    return;
-  }
 
   const { weeks } = contributes.data.user.contributionsCollection.contributionCalendar;
 

@@ -23,9 +23,9 @@ const getColor = () => {
     return '#677fa3';
   } else if (8 <= hour && hour < 11) {
     return '#8EAAD3';
-  } else if (11 <= hour && hour < 14) {
+  } else if (11 <= hour && hour < 15) {
     return '#6C9BCF';
-  } else if (14 <= hour && hour < 17) {
+  } else if (15 <= hour && hour < 17) {
     return '#9CC5BF';
   } else if (17 <= hour && hour < 19) {
     return '#F2B880';

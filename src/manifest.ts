@@ -7,21 +7,24 @@ import { version } from '../package.json';
 
 const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
-  name: `${env.mode === 'development' ? '[Dev] ' : ''}Browser Extension TypeScript & React Starter`,
-  description: 'Browser Extension, TypeScript, React',
+  name: `${env.mode === 'development' ? '[Dev] ' : ''}Chot NewTab`,
+  description: 'Chot NewTab',
   version,
-  host_permissions: ['<all_urls>'],
+  host_permissions: ['https://contributes.obake.land/*', 'https://api.open-meteo.com/*'],
   options_ui: {
     page: 'options/options.html',
     open_in_tab: true,
   },
+  web_accessible_resources: [
+    {
+      resources: ['options/options.html'],
+      matches: ['<all_urls>'],
+    },
+  ],
   icons: {
-    '16': 'images/extension_16.png',
-    '32': 'images/extension_32.png',
-    '48': 'images/extension_48.png',
-    '128': 'images/extension_128.png',
+    '128': 'images/128.png',
   },
-  permissions: ['storage', 'tabs'],
+  permissions: ['storage'],
   chrome_url_overrides: {
     newtab: 'newtab/newtab.html',
   },

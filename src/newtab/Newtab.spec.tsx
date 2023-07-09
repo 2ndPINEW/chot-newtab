@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import NewTab from './NewTab';
+import NewTab from './Newtab';
 
 it('should load and display Popup', async () => {
   render(<NewTab />);
