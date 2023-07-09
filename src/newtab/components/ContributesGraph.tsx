@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useFetchContributes } from '../../app/hooks/useFetch';
 
 export const ContributesGraph = () => {

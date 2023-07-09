@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { getContribution } from '../api/github';
-import { QUERY_KEYS } from '../constants/queryKeys';
-import { contributesInitialData } from '../constants/initialData';
 import browser from 'webextension-polyfill';
+
+import { getContribution } from '../api/github';
 import { getWeatherData } from '../api/openmetro';
+import { contributesInitialData } from '../constants/initialData';
+import { QUERY_KEYS } from '../constants/queryKeys';
 
 export const useFetchContributes = () => {
   return useQuery({

@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
+
 import { useBackgroundColor } from '../../app/hooks/useBackgroundColor';
 import { useWeatherParticle } from '../../app/hooks/useWeatherParticle';
 
