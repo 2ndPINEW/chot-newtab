@@ -12,7 +12,6 @@ const NewTab = () => {
       <DynamicBackground></DynamicBackground>
       <div className="w-screen h-screen flex justify-center items-center flex-col">
         <Clock></Clock>
-        <div className="h-2"></div>
         <ContributesGraph></ContributesGraph>
       </div>
     </QueryClientProvider>
