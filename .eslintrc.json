@@ -19,10 +19,32 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks", "import", "unused-imports"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": 0
+    "prettier/prettier": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn"
   },
   "overrides": [
     {
